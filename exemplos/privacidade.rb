@@ -1,10 +1,12 @@
 class A
-  def public_method(a)
-    private_method(a)
+
+  def metodo_publico(a)
+    metodo_privado(a)
   end
 
   private
-  def private_method(d)
+
+  def metodo_privado(d)
     puts "Privte method"
   end
 end
