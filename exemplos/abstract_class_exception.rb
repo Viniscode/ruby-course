@@ -1,5 +1,3 @@
-
-
 class Worker
   def work
     raise NotImplementedError.new("#{self.class.name}#work is an abstract method.")
@@ -12,7 +10,7 @@ end
 
 class A
   def x_public_method (a)
-    a.x_private_method
+    x_private_method(a)
   end
 
   private
