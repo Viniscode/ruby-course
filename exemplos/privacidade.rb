@@ -7,10 +7,11 @@ class A
   private
 
   def metodo_privado(d)
-    puts "Privte method"
+    
+    puts "Metodo privado, so é possivel chamar metódos privado por funções, e não como atributos "
   end
 end
 
 xpto1 = A.new
 xpto2 = A.new
-xpto1.public_method(xpto2)
+xpto1.metodo_publico(xpto2)
