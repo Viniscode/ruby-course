@@ -1,6 +1,6 @@
 class A
   def public_method(a)
-    a.private_method
+    private_method(a)
   end
 
   private
