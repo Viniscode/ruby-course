@@ -2,31 +2,31 @@
 
 class Car
   def initialize
-    @price = 1.00
+    @price = 5000
     @components = []
   end
 
-  def add_component(component)
-    @components << component
-    @price += component.price
+  def add_component(value)
+    extras(value)
+    if self.acessorios_extras.include?value.to_sym
+    @components << value
+    @price *= self.acessorios_extras[value.to_sym]
+    else
+    puts "Não temos este component"
+    end
   end
 
-  def components_price
-    
-  def price
-    @price
+  def componentes
+    @components
+  end
+private 
+  def extras(value)
+    self.extend Acessorios
   end
 end
 
-class Alarm
-  attr_accessor :price
-  def initialize
-    @price = 0.2
-  end
-end
-
-class AirConditioning
-  def price
-    0.3
+module Acessorios
+  def acessorios_extras
+    @i = {ar_condicionado: 0.5, alarme: 0.2}
   end
 end
