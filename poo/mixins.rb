@@ -8,12 +8,20 @@ end
 
 class Brazilian
   include EnglishSpeaker
-  # ...
+  attr_accessor :name, :age
+  def initialize name, age
+    @name = name
+    @age = age
+  end
 end
 
 class French
   include EnglishSpeaker
-  # ...
+  attr_accessor :name, :age
+  def initialize name, age
+    @name = name
+    @age = age
+  end
 end
 
 
